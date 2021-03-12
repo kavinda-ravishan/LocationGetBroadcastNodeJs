@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Location</title>
+  </head>
+  <body>
+    <h1 class="title">Where is my Phone</h1>
+    <h3 class="moveMap">
+      Move the Map with Phone Location :
+      <span><input id="checkBox" type="checkbox" /></span>
+    </h3>
+    <p class="time">
+      Last Update : <span id="time">0 Hrs : 0 Min : 0 Sec : 0 ms</span>
+    </p>
+    <p class="location">
+      Latitude : <span id="latitude">0.0</span>°, Longitude :
+      <span id="longitude">0.0</span>°
+    </p>
+    <div class="map">
+      <div id="phoneMap"></div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

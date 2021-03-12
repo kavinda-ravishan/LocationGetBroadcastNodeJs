@@ -1,0 +1,24 @@
+#phoneMap {
+  height: 70vh;
+  width: 80vw;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+.time {
+  display: flex;
+  justify-content: center;
+}
+.location {
+  display: flex;
+  justify-content: center;
+}
+.map {
+  display: flex;
+  justify-content: center;
+}
+.moveMap {
+  display: flex;
+  justify-content: center;
+}
