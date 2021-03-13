@@ -1,4 +1,4 @@
-const api_url = "http://192.168.1.101:3000/api/location";
+const api_url = "/api/location";
 
 const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const attribution =
@@ -11,6 +11,7 @@ const marker = L.marker([0, 0]).addTo(issMap);
 
 const latitudeDom = document.getElementById("latitude");
 const longitudeDom = document.getElementById("longitude");
+const speedDom = document.getElementById("speed");
 const checkBoxDom = document.getElementById("checkBox");
 const timeDom = document.getElementById("time");
 
@@ -20,7 +21,7 @@ async function getPhone() {
 
   console.log(data);
 
-  const { Latitude, Longitude, Time } = data;
+  const { Latitude, Longitude, Speed, Time } = data;
 
   if (checkBoxDom.checked === true) issMap.setView([Latitude, Longitude]);
 
@@ -28,6 +29,7 @@ async function getPhone() {
 
   latitudeDom.textContent = Latitude;
   longitudeDom.textContent = Longitude;
+  speedDom.textContent = Speed;
   timeDom.textContent = Time;
 }
 
